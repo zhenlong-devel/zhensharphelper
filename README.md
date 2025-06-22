@@ -128,7 +128,10 @@ This project is licensed under the [MIT License](LICENSE).
 © 2025 ZhenGlobal - ZhenLong - zhenlong-devel
 
 ---
-
+## 🙌 Contributing
+- Pull requests, bug reports and suggestions are welcome!
+- Star ⭐ the repo if you find it useful!
+---
 ## 🚀 Installation
 
 ```sh
