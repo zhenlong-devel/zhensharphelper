@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ZhenSharpHelper</id>
+    <version>1.0.0</version>
+    <authors>Long (Zhen)</authors>
+    <owners>ZhenGlobal</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/zhenlong-devel/zhensharphelper</projectUrl>
+    <icon>logo.png</icon>
+    <readme>README.md</readme>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Modern utility toolkit for .NET 8+ – String, Data, Crypto, Validation, DateTime, File, Zip helpers and more.</description>
+    <releaseNotes>First stable release</releaseNotes>
+    <tags>sharp;helper;utils;extensions;dotnet;zhen;toolkit;library</tags>
+    <repository type="git" url="https://github.com/zhenlong-devel/zhensharphelper" />
+  </metadata>
+  <files>
+    <file src="release\net8.0\ZhenSharpHelper.dll" target="lib\net8.0\ZhenSharpHelper.dll" />
+    <file src="release\net8.0\ZhenSharpHelper.xml" target="lib\net8.0\ZhenSharpHelper.xml" /> <!-- Nếu có XML doc -->
+    <file src="logo.png" target="" />
+    <file src="README.md" target="" />
+    <file src="LICENSE" target="" />
+  </files>
+</package>
