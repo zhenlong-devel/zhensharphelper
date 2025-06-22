@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>ZhenSharpHelper</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Long (Zhen)</authors>
     <owners>ZhenGlobal</owners>
     <license type="expression">MIT</license>
@@ -10,16 +10,30 @@
     <icon>logo.png</icon>
     <readme>README.md</readme>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Modern utility toolkit for .NET 8+ – String, Data, Crypto, Validation, DateTime, File, Zip helpers and more.</description>
+    <description>Modern utility toolkit for .NET 8+ – String, Data, Crypto, Validation, DateTime,
+      File, Zip helpers and more.</description>
     <releaseNotes>First stable release</releaseNotes>
     <tags>sharp;helper;utils;extensions;dotnet;zhen;toolkit;library</tags>
     <repository type="git" url="https://github.com/zhenlong-devel/zhensharphelper" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="CsvHelper" version="33.1.0" />
+      </group>
+    </dependencies>
   </metadata>
   <files>
-    <file src="release\net8.0\ZhenSharpHelper.dll" target="lib\net8.0\ZhenSharpHelper.dll" />
-    <file src="release\net8.0\ZhenSharpHelper.xml" target="lib\net8.0\ZhenSharpHelper.xml" /> <!-- Nếu có XML doc -->
-    <file src="logo.png" target="" />
-    <file src="README.md" target="" />
-    <file src="LICENSE" target="" />
+    <file src="release\net8.0\ZhenSharpHelper.dll" target="lib\net8.0\" />
+   
+    <!-- <file src="native\zlib1.dll" target="runtimes\win-x64\native\zlib1.dll" />
+    <file src="native\libz.so" target="runtimes\linux-x64\native\libz.so" />
+    <file src="native\libz.dylib" target="runtimes\osx-x64\native\libz.dylib" />
+    <file src="config\default.cfg" target="contentFiles\any\any\default.cfg" /> -->
+
+    <file src="logo.png" target="logo.png" />
+    <file src="README.md" target="README.md" />
+    <file src="LICENSE" target="LICENSE" />
   </files>
+  <!-- <contentFiles>
+    <files include="any/any/default.cfg" buildAction="Content" copyToOutput="true" />
+  </contentFiles> -->
 </package>
