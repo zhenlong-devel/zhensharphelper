@@ -3,28 +3,57 @@
 [![NuGet](https://img.shields.io/nuget/v/ZhenSharpHelper.svg?style=flat-square)](https://www.nuget.org/packages/ZhenSharpHelper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **A modern utility toolkit for .NET 8+ projects**  
-> Fast, easy-to-use, well-tested, with extension methods and helpers for most daily tasks.
+> **A modern utility toolkit for .NET 8+ – Fast, easy, robust.**
 
 ---
 
-## ✨ Features
+## ✨ Features Overview
 
-- **Collections:** Fast operations for List, Dictionary, Set, conversion, search, deep clone, group by, diff, merge.
-- **String:** Format, split/join, trim, normalize, slugify, parse, mask, random, regex helpers.
-- **DateTime:** Parse, format, UTC, TimeZone, range, relative time, age calculation, business day, etc.
-- **Math & Number:** Convert, rounding, clamp, random, prime check, digit/hex/bin conversion.
-- **Validation:** Email, phone, credit card, password, custom regex, ID, ...
-- **IO & Files:** Path, extension, file size, secure read/write, temp file, ...
-- **Crypto:** Hash, GUID, shortId, token, simple encryption.
-- **Reflection & Type:** Fast mapping, dynamic object, prop get/set, cast.
-- **Random:** Number, string, shuffle, sample, pick.
-- **More...**  
-- **Full C# source code, MIT licensed.**
+ZhenSharpHelper includes specialized helpers and extension methods for daily .NET development:
+
+### 🅰️ StringHelper
+- **Format** (template replace, smart ToString)
+- **Split/Join** (delimiter, fixed length, group)
+- **Trim, Normalize** (diacritics, accents, unicode, spaces, case)
+- **Slugify** (SEO-friendly URL conversion)
+- **Parse, Mask** (mask phone/email/card, extract substring, parseInt/parseDouble)
+- **Random** (random string, password, guid, number)
+- **Regex** (IsMatch, MatchGroup, Replace, Validate, Pattern extractor...)
+
+### 💾 DataHelper
+- `ObjectToBytes<T>`, `BytesToObject<T>`
+- `StringToBytes`, `BytesToString`
+- `BytesToHexString`, `BytesToBase64`, `Base64ToBytes`
+- Quick conversion between object, bytes, base64, hex, string
+- Data serialization/deserialization helpers
+
+### 🔐 CryptoHelper
+- Hash: **MD5, SHA1, SHA256, SHA512, CRC, Bcrypt, ...**
+- Encrypt, Decrypt: Symmetric (AES), PasswordHash, Salt
+- Random token, guid, hash, etc.
+
+### ✔️ ValidationHelper
+- **Email, Phone, Username, Password, CreditCard, ID, Custom pattern**
+- Fast IsValidXXX methods for strings and numbers
+
+### 🕑 DateTimeHelper
+- Format and parse dates (multiple cultures)
+- Convert UTC ↔ Local, any timezone, Unix timestamp
+- Date math: Add, Diff, Age, Business day, Range, ...
+- TimeZoneInfo, convert timezones, get all system zones
+
+### 📂 FileHelper
+- Quick read/write: **XML, Tab, CSV, INI, XLS**
+- Path helpers, extension, file size format, secure file ops
+- Convert file to base64, hash file, stream tools, more...
+
+### 📦 ZipHelper
+- Compress, decompress: **zip, rar, 7z, tar, gz** (auto-detect)
+- Extract single/multiple files, password support
 
 ---
 
-## 🚀 Install
+## 🚀 Installation
 
-```bash
+```sh
 dotnet add package ZhenSharpHelper
