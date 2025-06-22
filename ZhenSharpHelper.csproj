@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageId>ZhenSharpHelper</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Long (Zhen)</Authors>
+    <Company>ZhenGlobal</Company>
+    <Description>Modern utility toolkit for .NET 8+ – String, Data, Crypto, Validation, DateTime, File, Zip helpers and more.</Description>
+    <PackageTags>sharp;helper;utils;extensions;dotnet;zhen;toolkit;library</PackageTags>
+    <RepositoryUrl>https://github.com/zhenlong-devel/zhensharphelper</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+    <None Include="logo.png" Pack="true" PackagePath="" />
+    <None Include="logo.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
