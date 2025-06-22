@@ -4,9 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > **A modern utility toolkit for .NET 8+ – Fast, easy, robust.**
-
 ---
-
 ## ✨ Features Overview
 
 ZhenSharpHelper includes specialized helpers and extension methods for daily .NET development:
@@ -50,6 +48,84 @@ ZhenSharpHelper includes specialized helpers and extension methods for daily .NE
 ### 📦 ZipHelper
 - Compress, decompress: **zip, rar, 7z, tar, gz** (auto-detect)
 - Extract single/multiple files, password support
+---
+## ⚡ Quick Start Examples
+
+### 🅰️ StringHelper
+
+```csharp
+using ZhenSharpHelper;
+
+// Slugify
+string slug = StringHelper.Slugify("Sáng tạo & Đổi mới!"); // "sang-tao-doi-moi"
+
+// Mask
+string masked = StringHelper.Mask("0912345678", 3, 3); // "091****678"
+
+// Random password
+string pw = StringHelper.RandomString(10);
+
+// Normalize accents
+string norm = StringHelper.Normalize("Cà phê sữa đá"); // "Ca phe sua da"
+```
+### 💾 DataHelper
+
+```csharp
+byte[] bytes = DataHelper.StringToBytes("hello world");
+string hex = DataHelper.BytesToHexString(bytes);
+string b64 = DataHelper.BytesToBase64(bytes);
+var obj = DataHelper.BytesToObject<MyClass>(bytes);
+```
+### 🔐 CryptoHelper
+
+```csharp
+string md5 = CryptoHelper.Md5("123456");      // "e10adc3949ba59abbe56e057f20f883e"
+string hash = CryptoHelper.Sha256("data");
+string encrypted = CryptoHelper.Encrypt("secret", "password123");
+string decrypted = CryptoHelper.Decrypt(encrypted, "password123");
+```
+### ✔️ ValidationHelper
+
+```csharp
+bool ok1 = ValidationHelper.IsValidEmail("test@email.com");
+bool ok2 = ValidationHelper.IsValidPhone("0912345678");
+bool ok3 = ValidationHelper.IsValidUserName("zhen_dev");
+```
+### 🕑 DateTimeHelper
+
+```csharp
+var local = DateTimeHelper.UtcToLocal(DateTime.UtcNow, "SE Asia Standard Time");
+var utc = DateTimeHelper.LocalToUtc(DateTime.Now, "SE Asia Standard Time");
+string formatted = DateTimeHelper.Format(DateTime.Now, "yyyy-MM-dd HH:mm");
+TimeSpan diff = DateTimeHelper.DiffDays(DateTime.Now, DateTime.Now.AddDays(10));
+```
+### 📂 FileHelper
+
+```csharp
+string csv = FileHelper.ReadCsv("data.csv");
+FileHelper.WriteXml("data.xml", obj);
+string[] lines = FileHelper.ReadTab("data.txt");
+```
+📦 ZipHelper
+
+```csharp
+ZipHelper.CompressFolder("data/", "data.zip");
+ZipHelper.Extract("data.zip", "output/", "optionalPassword");
+```
+---
+## 📚 Documentation
+
+- [API Reference (coming soon)](https://github.com/zhenlong-devel/zhensharphelper)
+- See code comments (XML doc) and included unit tests for practical usage examples.
+- Most methods are named intuitively and easily discoverable via IntelliSense.
+- Contributions for improved docs and real-world examples are always welcome at the [GitHub repository](https://github.com/zhenlong-devel/zhensharphelper)!
+
+---
+## ❤️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+© 2025 ZhenGlobal - ZhenLong - zhenlong-devel
 
 ---
 
@@ -57,3 +133,4 @@ ZhenSharpHelper includes specialized helpers and extension methods for daily .NE
 
 ```sh
 dotnet add package ZhenSharpHelper
+```
